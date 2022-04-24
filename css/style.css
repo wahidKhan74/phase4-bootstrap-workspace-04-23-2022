@@ -6,9 +6,34 @@
     background-color: #03274a!important;
 }
 
+.form-container {
+    border: 2px solid green;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.form-check-inline {
+    margin-top: 36px;
+}
+
+
 .jumbotron {
     padding: 2rem 1rem;
     margin-bottom: 1rem;
     background-color: #cde1f6;
     border-radius: 0.3rem;
+}
+
+.bg-one {
+    border: 2px solid green;
+    background-color: aquamarine;
+}
+
+.bg-two {
+    border: 2px solid brown;
+    background-color: bisque;
+}
+.bg-three {
+    border: 2px solid blue;
+    background-color:  cornflowerblue;
 }

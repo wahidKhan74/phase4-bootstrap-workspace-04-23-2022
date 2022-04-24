@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <!-- Page Header  -->
+    <header>
+        <div class="container">
+          <div
+            class="alert alert-primary alert-dismissible fade show text-center"
+            role="alert"
+          >
+            <strong>Welcome to BigEcom Blogs</strong> You should check in on some
+            of those fields below.
+            <button
+              type="button"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </header>
+  
+      <!-- Page Navbar  -->
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">BigEcom</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="regsitration.html">Register</a>
+              </li>
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">List Products</a>
+                  <a class="dropdown-item" href="#">Create Product</a>
+                  <a class="dropdown-item" href="#">Update Product</a>
+                </div>
+              </li>
+        
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Product Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container form-container">
+        <h1>Registration Form</h2>
+        <form action="/register" method="post" class="form-validate needs-validation" novalidate >
+
+            <div class="form-group form-row">
+                <div class="col-md-6">
+                    <label for="firstName">First Name : </label>
+                    <input type="text" id="firstName" name="firstName" class="form-control" required >
+                    <div class="valid-feedback">
+                        The firstname is pecfect.
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a valid firstname.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="lastName">Last Name : </label>
+                    <input type="text" id="lastName" name="lastName" class="form-control" required minlength="3" maxlength="8">
+                    <div class="valid-feedback">
+                        The lastname is pecfect.
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a valid lastname.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group form-row">
+                <div class="col-md-6">
+                    <label for="userName">Username : </label>
+                    <input type="text" id="userName" name="userName" class="form-control" required minlength="3" maxlength="8">
+                    <div class="valid-feedback">
+                        The username is pecfect.
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a valid username.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="email">Email : </label>
+                    <input type="email" id="email" name="email" class="form-control" required minlength="8" maxlength="20">
+                    <div class="valid-feedback">
+                        The email is pecfect.
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a valid email.
+                    </div>
+                </div>                
+            </div>
+
+            <div class="form-group form-row">
+                <div class="col-md-6">
+                    <label for="password">Password : </label>
+                    <input type="password" id="password" name="password" class="form-control" required minlength="8" maxlength="20">
+                    <div class="valid-feedback">
+                        The password is pecfect.
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a valid password.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="cnfPassword">Confirm Password : </label>
+                    <input type="text" id="cnfPassword" name="cnfPassword" class="form-control"
+                    required minlength="8" maxlength="20">
+                    <div class="valid-feedback">
+                        The cnfPassword is pecfect.
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a valid cnfPassword.
+                    </div>
+                </div>                
+            </div>
+
+            <div class="form-group form-row">
+                <div class="col-md-6">
+                    <label for="roleSelect"> Select Role</label>
+                    <select name="roleSelect" id="roleSelect" class="form-control" required>
+                        <option value="">Choose ...</option>
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                        <option value="vendor">Vendor</option>
+                    </select>
+                    <div class="valid-feedback">
+                        The role is select correctly.
+                    </div>
+                    <div class="invalid-feedback">
+                        Please select a correct role.
+                    </div>
+                </div>
+                <div class="cole-md-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="userStatus" id="userStatus1" value="Active" >
+                        <label class="form-check-label" for="userStatus1">
+                            Active
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="userStatus" id="userStatus2" value="InActive" required>
+                        <label class="form-check-label" for="userStatus2">
+                            InActive
+                        </label>
+                      </div>
+                      <div class="valid-feedback">
+                        The role is select correctly.
+                        </div>
+                        <div class="invalid-feedback">
+                            Please select a correct role.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="rememberme" required>
+                <label class="form-check-label" for="rememberme">Remember me</label>
+                <div class="valid-feedback">
+                    Selected Remember me.
+                  </div>
+                  <div class="invalid-feedback">
+                    Please select Remember me.
+                  </div>
+              </div>
+            <div class="form-row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-success btn-block">Submit</button>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+              
+        </form>
+      </div>
+      <script>
+          var form = document.querySelector('.form-validate');
+          // console.log(form);
+          form.addEventListener('submit', function(event) {
+            if(form.checkValidity()===false){
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add("was-validated");
+          });
+      </script>
+      <script>
+          $(document).ready(function () {
+            $("#password, #cnfPassword").on("keyup", function () {
+                // store the `password` and `cnfPassword` in two variables
+                var passwordValue = $("#password").val();
+                var cnfPasswordValue = $("#cnfPassword").val();
+
+                if (passwordValue.length > 0 && cnfPasswordValue.length > 0) {
+                if (cnfPasswordValue !== passwordValue) {
+                    $("#password-does-not-match-text").removeAttr("hidden");
+                    $("#submitBtn").attr("disabled", true);
+                }
+                if (cnfPasswordValue === passwordValue) {
+                    $("#submitBtn").removeAttr("disabled");
+                    $("#password-does-not-match-text").attr("hidden", true);
+                }
+                }
+            });
+            });
+      </script>
+    <script src="../js/jquery.slim.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
